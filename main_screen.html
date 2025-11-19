@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence Analysis Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans" style="font-family: 'Inter', sans-serif;">
+
+    <div class="container mx-auto p-4">
+        <header class="flex justify-between items-center mb-4 pb-2 border-b border-gray-700">
+            <h1 class="text-3xl font-bold text-white">Project 3: Intelligence Analysis Dashboard</h1>
+            <button id="reset-button" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow transition duration-200 ease-in-out">
+                Reset View
+            </button>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <div class="lg:col-span-2 bg-gray-800 p-4 rounded-lg shadow-lg" style="min-height: 500px;">
+                <h2 class="text-xl font-semibold mb-2 text-white">Suspect & Organization Network (Who)</h2>
+                <p class="text-sm text-gray-400 mb-2">Nodes are people (blue) or organizations (green). Click a node to filter.</p>
+                <div id="network-graph" class="w-full h-full relative">
+                    <svg id="network-svg" class="w-full h-full"></svg>
+                    <div id="network-loading" class="absolute inset-0 flex items-center justify-center text-lg">
+                        Loading network graph...
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-1 flex flex-col gap-6">
+                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <h2 class="text-xl font-semibold mb-2 text-white">Locations (Where)</h2>
+                    <p class="text-sm text-gray-400 mb-2">Click a bar to filter by location.</p>
+                    <div id="location-chart" class="w-full">
+                        <svg id="location-svg" class="w-full"></svg>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <h2 class="text-xl font-semibold mb-2 text-white">Event Timeline (When)</h2>
+                    <p class="text-sm text-gray-400 mb-2">Click and drag to select a time range.</p>
+                    <div id="timeline-chart" class="w-full">
+                        <svg id="timeline-svg" class="w-full"></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-3 bg-gray-800 p-4 rounded-lg shadow-lg" style="min-height: 400px;">
+                <h2 class="text-xl font-semibold mb-2 text-white">Report Details (What)</h2>
+                <p class="text-sm text-gray-400 mb-2">
+                    Showing <span id="report-count" class="font-bold">0</span> reports. Click on
+                    <span class="clickable-example">highlighted entities</span>
+                    to filter.
+                </p>
+                <div id="report-list" class="h-96 overflow-y-auto pr-2 space-y-4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="dashboard.js"></script>
+</body>
+</html>

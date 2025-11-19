@@ -1,0 +1,113 @@
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+/*network graph*/
+.node {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    stroke-width: 2px;
+}
+/*blue for person*/
+.node.person {
+    fill: #3b82f6; 
+    stroke: #bfdbfe; 
+}
+/*green for org*/
+.node.organization {
+    fill: #10b981;
+    stroke: #a7f3d0;
+}
+
+.node:hover {
+    stroke-width: 4px;
+    transform: scale(1.1);
+}
+
+.link {
+    stroke: #4b5563;
+    stroke-opacity: 0.6;
+}
+
+.node-label {
+    fill: #d1d5db;
+    font-size: 10px;
+    pointer-events: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
+
+/*location chart*/
+.location-bar {
+    fill: #2563eb;
+    cursor: pointer;
+    transition: fill 0.2s ease-in-out;
+}
+
+.location-bar:hover {
+    fill: #3b82f6; 
+}
+
+.location-label {
+    fill: #d1d5db; 
+    font-size: 10px;
+}
+
+/*timeline chart*/
+.timeline-bar {
+    fill: #4b5563; 
+}
+
+.timeline-brush .selection {
+    fill: #3b82f6;
+    fill-opacity: 0.5;
+}
+
+/*report list*/
+.report-card {
+    background-color: #1f2937;
+    border: 1px solid #374151; 
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #374151;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.report-id {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.report-date {
+    font-size: 0.9rem;
+    color: #9ca3af; 
+}
+
+.report-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #d1d5db; 
+}
+
+/*highlighted report text */
+.clickable, .clickable-example {
+    color: #60a5fa; 
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: #60a5fa30;
+    transition: all 0.2s;
+}
+
+.clickable:hover, .clickable-example:hover {
+    background-color: #60a5fa20;
+    color: #93c5fd; 
+}
