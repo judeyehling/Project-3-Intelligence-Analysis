@@ -16,6 +16,9 @@ export const ALIAS_MAP = {
     "Ronald Derwish": "Satam Derwish",
     "Ralph Bean": "Raeed Beandali",
     "Reginald Cooper": "Mahmud al-Dahab",
+    "Boris": "Boris Bugarov",
+    "Pyotr": "Pyotr Sofrygin",
+    "Sofrygin": "Pyotr Sofrygin",
     "A. Somad": "Abu Somad",
     "Y. Bafaba": "Yazid Bafaba",
     "Hafs or Halfs": "Abdillah Zinedine", 
@@ -249,4 +252,5 @@ function generateTimelineData(reports) {
         count
     })).sort((a, b) => a.date - b.date);
 }
+
 
