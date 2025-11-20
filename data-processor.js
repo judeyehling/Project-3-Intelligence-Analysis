@@ -12,6 +12,8 @@ export const ALIAS_MAP = {
     "Fr. Augustin Dominique": "Abdal al Hawsawi",
     "Omar Blakely": "Rifai Qasim",
     "Ronald": "Satam Derwish",
+    "R. Derwish": "Satam Derwish",
+    "Ronald Derwish": "Satam Derwish",
     "Ralph Bean": "Raeed Beandali",
     "Reginald Cooper": "Mahmud al-Dahab",
     "A. Somad": "Abu Somad",
@@ -247,3 +249,4 @@ function generateTimelineData(reports) {
         count
     })).sort((a, b) => a.date - b.date);
 }
+
